@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration form</title>
+        <link rel="stylesheet" href="../css/Registrationform.css">
+    </head>
+    <!-- header starts -->
+    <header>
+        <ol class="topnav" id="myTopnav">
+            <a>Warthog Express Liner</a>
+            <a href="Home.html">Home</a>
+            <a href="Specials.html">Specials</a>
+            <a href="Contactus.html">Contact Us</a>
+            <a href="Routes.html">Routes</a>
+            <a href="Products.html">Products</a>
+            <a href="Conditions.html">Conditions</li>
+            <a href="Aboutus.html">About Us</a>
+            <a class="active" href="Registrationform.html">Registration form</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </a>
+        </ol>
+    </header>
+      <!-- header ends -->
+    <body>
+        <article id="top-header">
+            <div  class="top-header">
+                <h1>Registration Form</h1>
+            </div>
+        </article>
+        <form class="frmReg" name="frmReg" action="../php/connection.php" method="POST">
+            <fieldset>
+                <legend>Registration Form</legend>
+                <label>ID Number: </label><br>
+                <input class="form-group" required placeholder="enter ID number" type="text" name="idnumber" id="idnumber"><br>
+                <label>Title:</label><br>
+                <select class="form-group" name="title-dropdown" id="title-dropdown">
+                    <option value="none">None</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Other">Other</option>
+                </select><br>
+                <label>First Name: </label><br><input class="form-group" required placeholder="enter name" type="text" name="firstname" id="firstname"><br>
+                <label>Last Name: </label><br><input class="form-group" required placeholder="enter last name" type="text" name="lastname" id="lastname"><br>
+                <label>Address: </label><br><input class="form-group" placeholder="enter address" required  type="text" name="address" id="address"><br>
+                <label>City: </label><br><input class="form-group" required placeholder="enter city" type="text" name="city" id="city"><br>
+                <label>Zip Code: </label><br><input class="form-group" required placeholder="enter zip" min="1" max="9999" type="number" name="zipcode" id="zipCode"><br>
+                <label>Email Address: </label><br><input class="form-group" required placeholder="enter email" type="email" name="email" id="email"><br>
+                <label>Mobile Number: </label><br><input class="form-group" required placeholder="enter number" type="tel" name="mobile-number" id="mobile-number"><br>
+                <label>Home Language: </label><br>
+                <select class="form-group" name="home-language" id="home-language">
+                    <option value="none">None</option>
+                    <option value="English">English</option>
+                    <option value="Afrikaans">Afrikaans</option>
+                    <option value="Sesotho">Sesotho</option>
+                    <option value="Sestwana">Sestwana</option>
+                    <option value="Ndebele">Ndebele</option>
+                    <option value="Venda">Venda</option>
+                    <option value="Tsonga">Tsonga</option>
+                    <option value="Zulu">Zulu</option>
+                    <option value="Xhosa">Xhosa</option>
+                    <option value="Swati">Swati</option>
+                    <option value="Sign-language">Sign Language</option>
+                    <option value="Other">Other</option>
+                </select><br>
+                <label>Additional Language: </label><br>
+                <select class="form-group" name="additional-language" id="additional-language">
+                    <option value="none">None</option>
+                    <option value="English">English</option>
+                    <option value="Afrikaans">Afrikaans</option>
+                    <option value="Sesotho">Sesotho</option>
+                    <option value="Sestwana">Sestwana</option>
+                    <option value="Ndebele">Ndebele</option>
+                    <option value="Venda">Venda</option>
+                    <option value="Tsonga">Tsonga</option>
+                    <option value="Zulu">Zulu</option>
+                    <option value="Xhosa">Xhosa</option>
+                    <option value="Swati">Swati</option>
+                    <option value="Sign-language">Sign Language</option>
+                    <option value="Other">Other</option>
+                </select><br>
+                <label>Message</label><br>
+                <textarea class="form-group" id="subject" name="subject" placeholder="Write something.." 
+                        style="height:200px"></textarea><br>
+            <div class="" id="InfMess"></div>
+                <div class="form-group">
+                    <input class="button"class="button" type="submit" value="submit" onclick="frm()">
+                    <input class="button" type="reset" value="reset">
+                </div>
+            </fieldset>
+        </form>
+        <script src="../js/jsFunctions.js"></script>
+    </body>
+    <footer>&#169 Thabang Makhubo</footer>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="../css/Contactus.css">
+        <script src="../js/jsFunctions.js"></script>
+    </head>
+    <!-- header starts -->
+    <header>
+        <ol class="topnav" id="myTopnav">
+            <a>Warthog Express Liner</a>
+            <a href="Home.html">Home</a>
+            <a href="Specials.html">Specials</a>
+            <a  class="active" href="Contactus.html">Contact Us</a>
+            <a href="Routes.html">Routes</a>
+            <a href="Products.html">Products</a>
+            <a href="Conditions.html">Conditions</li>
+            <a href="Aboutus.html">About Us</a>
+            <a href="Registrationform.html">Registration form.</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </a>
+        </ol>
+    </header>
+    <!-- header ends -->
+    <body>
+      <article id="top-header">
+          <div  class="top-header">
+            <h1>Contact Us</h1>
+          </div>
+      </article>
+      <div class="container">
+        <div class="column">
+          <form action="action_page.php">
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">First Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="lname">Last Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="country">Email Address</label>
+              </div>
+              <div class="col-75">
+                <input type="email" name="email" id="email" placeholder="Your email address..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Subject</label>
+              </div>
+              <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+        <div class="column">
+          <div class="contact-section-header">
+            <h2>Let's Collaborate!</h2>
+          </div>
+          <div>
+            <p>
+              If you'd like to see what we're up to at the moment, catch us on our social platforms.
+            </p>
+            <p>
+              Any feedback or media enquiries you'd like to make, please feel free to fill in the form on the left, stating your query and we'll be sure to get back to you.
+            </p>
+            <p>
+              <div class="button-group">
+                <a href="#" target="_blank" class="btn contact-details"><i class="fab fa-facebook-square"></i>Facebook</a>
+                <a href="#" target="_blank" class="btn contact-details"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" class="btn contact-details"><i class="fas fa-at"></i> Send a mail</a>
+                <a href="#" class="btn contact-details"><i class="fas fa-mobile-alt"></i> Call Us</a>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+  </body>
+  <footer>
+    &#169 Thabang Makhubo
+  </footer>
+</html>
