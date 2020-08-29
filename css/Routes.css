@@ -132,6 +132,7 @@ th {
 table {
     width: 60%;
     margin: auto;
+    text-align: center;
     border: red 1px solid;
 }
 

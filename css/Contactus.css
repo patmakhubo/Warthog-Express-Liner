@@ -144,10 +144,19 @@ button {
   width: 100%;
   margin: 0px auto;
 }
-.column {
+.column,.column-2 {
     float: left;
-    width: 45%;
+    width: 50%;
     padding:2rem;
+}
+.column-2 {
+    float: left;
+    width: 40%;
+    padding:1rem;
+}
+.img-body{
+    width: 50%;
+    margin: 8px auto;
 }
 .container:after {
     display: table;
@@ -188,4 +197,25 @@ columns stack on top of each other instead of next to each other */
     width: 100%;
     margin-top: 0;
   }
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.contact-section-header {
+    text-align: center;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div > p {
+    width: 80%;
+    margin: 0 auto;
+    font-weight: bolder;
+    color: grey;
+    font-size: 18px;
+    padding: 1rem;
 }
