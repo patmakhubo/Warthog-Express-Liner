@@ -37,52 +37,55 @@
         <!-- main starts -->
         <main>
             <div class="wrapper"> 
-                <div class="one"><img src="../assets/p1.jpg"></div>
-                <div class="two">
-                    <h4>CALL DRIVER</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicingedsedsis 
-                        elited. Necessitatibus aliquid, architecto ullam esdefugiat 
-                        quasi! Doloribus eaque quam soluta quae porro reprehenderit 
-                        edsconsequuntur hic ducimus consequatur, dicta officia 
-                        excepturi quos, quis voluptatum optio deserunt sit.
-                    </p>
-                </div>
-                <div class="three"><img src="../assets/p3.jpg"></div>
-                <div class="four">
-                    <h4>CALL DRIVER</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicingedsedsis 
-                        elited. Necessitatibus aliquid, architecto ullam esdefugiat 
-                        quasi! Doloribus eaque quam soluta quae porro reprehenderit 
-                        edsconsequuntur hic ducimus consequatur, dicta officia 
-                        excepturi quos, quis voluptatum optio deserunt sit.
-                    </p>
-                </div>
-                <div class="five"><img src="../assets/p5.jpg"></div>
-                <div  class="six">
-                    <h4>CALL DRIVER</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicingedsedsis 
-                        elited. Necessitatibus aliquid, architecto ullam esdefugiat 
-                        quasi! Doloribus eaque quam soluta quae porro reprehenderit 
-                        edsconsequuntur hic ducimus consequatur, dicta officia 
-                        excepturi quos, quis voluptatum optio deserunt sit. 
-                    </p>
-                </div>
-                <div class="seven"><img src="../assets/p6.jpg"></div>
-                <div  class="eight">
-                    <h4>CALL DRIVER</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicingedsedsis 
-                        elited. Necessitatibus aliquid, architecto ullam esdefugiat 
-                        quasi! Doloribus eaque quam soluta quae porro reprehenderit 
-                        edsconsequuntur hic ducimus consequatur, dicta officia 
-                        excepturi quos, quis voluptatum optio deserunt sit. 
-                    </p>
-                </div>
+                <div class="pic fade active" style="display:none;"><img src="../assets/p1.jpg"></div>
+                <div class="pic fade" style="display:none;"><img src="../assets/p3.jpg"></div>
+                <div class="pic fade" style="display:none;"><img src="../assets/p5.jpg"></div>
+                <div class="pic fade" style="display:none;"><img src="../assets/p6.jpg"></div>
+                <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
             </div>
         </main>
+        
+        <script>
+            var slideInd = 0;
+            showSlides();
+            function plusSlides(n) {
+                showSlides(slideInd += n);
+            }
+        
+        function currentSlide(n) {
+            showSlides(slideInd = n);
+        }
+            function showSlides() {
+                var j;
+                var slides = document.getElementsByClassName("pic");
+                var dots = document.getElementsByClassName("dot");
+                
+                for (j = 0; j < slides.length; j++) {
+                    slides[j].style.display = "none";
+                }
+                
+                slideInd++;
+                
+                if (slideInd> slides.length)
+                {
+                    slideInd = 1
+                }
+                
+                for (j = 0; j < dots.length; j++) {
+                    dots[j].className = dots[j].className.replace(" active", "");
+                }
+                
+                slides[slideInd-1].style.display = "block";  
+                dots[slideInd-1].className += " active";
+                setTimeout(showSlides, 6000); // Change image every 2 seconds
+            }
+        </script>
     </body>
     <footer>&#169 Thabang Makhubo</footer>
 </html>

@@ -1,6 +1,8 @@
+
+
 function myFunction() {
-    var x = document.getElementById("myTopnav");
-    x.className = (x.className === "topnav") ? x.className + " responsive": "topnav";
+    var topnav = document.getElementById("myTopnav");
+    topnav.className = (topnav.className === "topnav") ? topnav.className + " responsive": "topnav";
 }
 
 // Get the input field
@@ -39,21 +41,20 @@ function frm() {
   }
 }
 
-function getCookie(cname){
-  var name = cname + "=";
-  var ca = document.cookie.split(';');
-  for(var i = 0; i < ca.length; i++){
-    var c = ca[i];
+function getCookie(cookieName){
+  var name = cookieName + "=";
+  var totCookies = document.cookie.split(';');
+  for(var i = 0; i < totCookies.length; i++){
+    var c = totCookies[i];
     while(c.charAt(0)==' '){
       c = c.substring(1);
       if(c.indexOf(name) == 0){
-        var ll = c.substring(name.length,c.length);
-        var oo = /x/;
-        ll=ll.replace('+', ' ');
-        
-        return ll;
+        var relevantCookie = c.substring(name.length,c.length);
+        relevantCookie=relevantCookie.replace('+', ' ');
+        return relevantCookie;
       }
     }
   }
   return "";
 }
+
