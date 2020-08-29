@@ -1,5 +1,5 @@
-CREATE DATABASE `registrationform`;
-USE `registrationform`;
+CREATE DATABASE  IF NOT EXISTS `warthogexpressliner`;
+USE `warthogexpressliner`;
 CREATE TABLE IF NOT EXISTS `registrationform` (
   `idForm` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `idNumber` varchar(13) NOT NULL,

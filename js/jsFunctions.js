@@ -12,20 +12,20 @@ var input = document.getElementById("myInput");
 var text = document.getElementById("text");
 
 // When the user presses any key on the keyboard, run the function
-// input.addEventListener("keyup", function(event) {
+input.addEventListener("keyup", function(event) {
 
-//   // If "caps lock" is pressed, display the warning text
-//   if (event.getModifierState("CapsLock")) {
-//     text.style.display = "block";
-//   } else {
-//     text.style.display = "none"
-//   }
-// });
+  // If "caps lock" is pressed, display the warning text
+  if (event.getModifierState("CapsLock")) {
+    text.style.display = "block";
+  } else {
+    text.style.display = "none"
+  }
+});
 
 function validateForm() {
   var x = document.forms["myForm"]["fname"].value;
   if (x == "") {
-    alert("Name must be filled out");
+    alert("elements must be filled out");
     return false;
   }
 }
@@ -50,7 +50,7 @@ function getCookie(cookieName){
       c = c.substring(1);
       if(c.indexOf(name) == 0){
         var relevantCookie = c.substring(name.length,c.length);
-        relevantCookie=relevantCookie.replace('+', ' ');
+        relevantCookie=relevantCookie.replace('%20', ' ');
         return relevantCookie;
       }
     }

@@ -84,12 +84,9 @@ body, h1, ol{
 h1, h2, h3, h4, h5, h6 {
     font-size: calc(20px + 2vw);
 }
-.wrapper {
-    width: 50%;
-    margin: 0 auto;
-}
+
 div>img {
-    padding: 0 20%;
+    padding: 0 25%;
     margin: 0 auto;
 }
 .top-header { 
@@ -102,27 +99,25 @@ div>img {
     text-shadow: -1px 0 rgba(0,0,0,0.5), 0 1px rgba(0,0,0,0.5), 
         1px 0 rgba(0,0,0,0.5), 0 -1px rgba(0,0,0,0.5);
 }
-.top-header {
-    color: white;
-    font-size: 4em;
+h3 {
+    color: red;
     padding: 1vh 4vw;
     font-family: Arial;
-    text-shadow: -1px 0 rgba(0,0,0,0.5), 0 1px rgba(0,0,0,0.5), 1px 0 rgba(0,0,0,0.5), 0 -1px rgba(0,0,0,0.5);
+    text-shadow: 2px 4px grey;
+    text-align: center;
 }
 /** Main **/
-.wrapper > div {
-    font-size: 4vh;
-    color: white;
-    margin: 0.1em;
-    padding: 0.3em;
-    border-radius: 3px;
-    flex: 1 1 0%;
+.wrapper > .dots{
+    margin: 0 auto;
+    width: 15%;
 }
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+.fade {
+    min-width: 50vh;
 }
-
+ img {
+    margin: 0 auto;
+    width: 50%;
+}
 footer {
     background-color: red;
     opacity: .85;
@@ -132,45 +127,23 @@ footer {
     padding: 24px 16px;
     font-size: 17px;
 }
-.prev:hover, .next:hover {
-    background-color: red;
-}
-.pic {
+
+.pic1,.pic2,.pic3 {
     display: none;
-
 }
 
-.wrapper >a {
-    position: relative;
-    top: 20px;
-    margin: auto;
-    z-index: -1;
-    color: red;
-}
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-}
-.dot {
+.dot1,.dot2,.dot3 {
+    text-align: center;
     cursor:pointer;
-    height: 13px;
-    width: 13px;
-    margin: 0 2px;
+    height: 1rem;
+    width: 1rem;
+    margin: 6px 4px;
     background-color: grey;
-    border-radius: 50%;
+    border-radius: 100%;
     display: inline-block;
     transition: background-color 0.6s ease;
+    
 }
-.active, .dot:hover {
-    background-color: #717171;
+.active {
+    background-color: red;
 }

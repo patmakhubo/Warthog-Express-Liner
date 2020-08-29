@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
       <link rel="stylesheet" href="../css/Products.css">
-      <script src="../js/jsFunctions.js"></script>
 </head>
     <!-- header starts -->
     <header>
@@ -25,6 +24,7 @@
                 <div class="bar3"></div>
             </a>
         </ol>
+        <script src="../js/jsFunctions.js"></script>
     </header>
     <!-- header ends -->
     <body>
@@ -37,55 +37,46 @@
         <!-- main starts -->
         <main>
             <div class="wrapper"> 
-                <div class="pic fade active" style="display:none;"><img src="../assets/p1.jpg"></div>
-                <div class="pic fade" style="display:none;"><img src="../assets/p3.jpg"></div>
-                <div class="pic fade" style="display:none;"><img src="../assets/p5.jpg"></div>
-                <div class="pic fade" style="display:none;"><img src="../assets/p6.jpg"></div>
-                <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span> 
-                <span class="dot" onclick="currentSlide(2)"></span> 
-                <span class="dot" onclick="currentSlide(3)"></span> 
+                <div class="products-header">
+                    <h3>Economy</h3>
+                </div>
+                <div class="pic1 fade"><img class="caraosel" src="../assets/p1.jpg"></div>
+                <div class="pic1 fade"><img class="caraosel" src="../assets/p3.jpg"></div>
+                <div class="pic1 fade"><img class="caraosel" src="../assets/p5.jpg"></div>
+                <div class="dots">
+                    <span class="dot1" onclick="currentSlide1(1)"></span> 
+                    <span class="dot1" onclick="currentSlide1(2)"></span> 
+                    <span class="dot1" onclick="currentSlide1(3)"></span> 
+                </div>
             </div>
+            <div class="wrapper"> 
+                <div class="products-header">
+                    <h3>Standard</h3>
+                </div>
+                <div class="pic2 fade"><img class="caraosel" src="../assets/p2.jpg"></div>
+                <div class="pic2 fade"><img class="caraosel" src="../assets/p4.jpg"></div>
+                <div class="pic2 fade"><img class="caraosel" src="../assets/p6.jpg"></div>
+                <div class="dots">
+                    <span class="dot2" onclick="currentSlide2(1)"></span> 
+                    <span class="dot2" onclick="currentSlide2(2)"></span> 
+                    <span class="dot2" onclick="currentSlide2(3)"></span> 
+                </div>
+            </div>
+            <div class="wrapper"> 
+                <div class="products-header">
+                    <h3>Luxury</h3>
+                </div>
+                <div class="pic3 fade"><img class="caraosel" src="../assets/p3.jpg"></div>
+                <div class="pic3 fade"><img class="caraosel" src="../assets/p5.jpg"></div>
+                <div class="pic3 fade"><img class="caraosel" src="../assets/p7.jpg"></div>
+                <div class="dots">
+                    <span class="dot3" onclick="currentSlide3(1)"></span> 
+                    <span class="dot3" onclick="currentSlide3(2)"></span> 
+                    <span class="dot3" onclick="currentSlide3(3)"></span> 
+                </div>
             </div>
         </main>
-        
-        <script>
-            var slideInd = 0;
-            showSlides();
-            function plusSlides(n) {
-                showSlides(slideInd += n);
-            }
-        
-        function currentSlide(n) {
-            showSlides(slideInd = n);
-        }
-            function showSlides() {
-                var j;
-                var slides = document.getElementsByClassName("pic");
-                var dots = document.getElementsByClassName("dot");
-                
-                for (j = 0; j < slides.length; j++) {
-                    slides[j].style.display = "none";
-                }
-                
-                slideInd++;
-                
-                if (slideInd> slides.length)
-                {
-                    slideInd = 1
-                }
-                
-                for (j = 0; j < dots.length; j++) {
-                    dots[j].className = dots[j].className.replace(" active", "");
-                }
-                
-                slides[slideInd-1].style.display = "block";  
-                dots[slideInd-1].className += " active";
-                setTimeout(showSlides, 6000); // Change image every 2 seconds
-            }
-        </script>
+        <script type="text/javascript" src="../js/products.js"></script>
     </body>
     <footer>&#169 Thabang Makhubo</footer>
 </html>
