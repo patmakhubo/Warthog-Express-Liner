@@ -1,5 +1,3 @@
-
-
 function myFunction() {
     var topnav = document.getElementById("myTopnav");
     topnav.className = (topnav.className === "topnav") ? topnav.className + " responsive": "topnav";
@@ -12,15 +10,15 @@ var input = document.getElementById("myInput");
 var text = document.getElementById("text");
 
 // When the user presses any key on the keyboard, run the function
-input.addEventListener("keyup", function(event) {
+// input.addEventListener("keyup", function(event) {
 
-  // If "caps lock" is pressed, display the warning text
-  if (event.getModifierState("CapsLock")) {
-    text.style.display = "block";
-  } else {
-    text.style.display = "none"
-  }
-});
+//   // If "caps lock" is pressed, display the warning text
+//   if (event.getModifierState("CapsLock")) {
+//     text.style.display = "block";
+//   } else {
+//     text.style.display = "none"
+//   }
+// });
 
 function validateForm() {
   var x = document.forms["myForm"]["fname"].value;
@@ -58,3 +56,18 @@ function getCookie(cookieName){
   return "";
 }
 
+function clearFields() {
+  document.getElementById("idnumber").value = '';
+  document.getElementById("title-dropdown").value = 'none';
+  document.getElementById("firstname").value = '';
+  document.getElementById("lastname").value = '';
+  document.getElementById("address").value = '';
+  document.getElementById("city").value = '';
+  document.getElementById("zipCode").value = '';
+  document.getElementById("email").value = '';
+  document.getElementById("mobile-number").value = '';
+  document.getElementById("home-language").value = 'none';
+  document.getElementById("additional-language").value = 'none';
+  document.getElementById("subject").value = '';
+  window.onload = alert("Form cleared, ");
+}

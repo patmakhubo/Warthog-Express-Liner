@@ -107,9 +107,10 @@ h3 {
     text-align: center;
 }
 /** Main **/
-.wrapper > .dots{
-    margin: 0 auto;
-    width: 15%;
+.wrapper > .dots {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 .fade {
     min-width: 50vh;

@@ -38,21 +38,21 @@
           </div>
       <div class="container">
         <div class="column">
-          <form action="action_page.php">
+          <form name="frmContacts" id="frmContacts" method="POST">
             <div class="row">
               <div class="col-25">
                 <label for="fname">First Name</label>
               </div>
               <div class="col-75">
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <input required type="text" id="fname" name="firstname" placeholder="Your name..">
               </div>
             </div>
             <div class="row">
               <div class="col-25">
-                <label for="lname">Last Name</label>
+                <label for="lname">Number</label>
               </div>
               <div class="col-75">
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <input required type="text" id="number" name="number" placeholder="Your contact number..">
               </div>
             </div>
             <div class="row">
@@ -60,7 +60,7 @@
                 <label for="country">Email Address</label>
               </div>
               <div class="col-75">
-                <input type="email" name="email" id="email" placeholder="Your email address..">
+                <input required type="email" name="email" id="email" placeholder="Your email address..">
               </div>
             </div>
             <div class="row">
@@ -68,13 +68,14 @@
                 <label for="subject">Subject</label>
               </div>
               <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <textarea min=2 id="subject" name="subject" placeholder="Write something.."></textarea>
               </div>
             </div>
             <div class="row">
-              <button type="submit">Submit</button>
+              <button type="submit" name="submit" id="submit"onclick="validContactUs()">Submit</button>
             </div>
           </form>
+          <script src="../js/forms.js"></script>
         </div>
         
         <div class="column">
