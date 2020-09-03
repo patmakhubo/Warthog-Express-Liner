@@ -15,7 +15,7 @@
             <a href="Contactus.html">Contact Us</a>
             <a href="Routes.html">Routes</a>
             <a href="Products.html">Products</a>
-            <a href="Conditions.html">Conditions</li>
+            <a href="Conditions.html">Conditions</a>
             <a href="Aboutus.html">About Us</a>
             <a class="active" href="Registrationform.html">Registration form</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -36,7 +36,7 @@
             <fieldset>
                 <legend>Registration Form</legend>
                 <label>ID Number: </label><br>
-                <input class="form-group" required placeholder="enter ID number" type="text" name="idnumber" id="idnumber"><br>
+                <input class="form-group"  placeholder="enter ID number" type="text" name="idnumber" id="idnumber"><br>
                 <label>Title:</label><br>
                 <select class="form-group" name="title-dropdown" id="title-dropdown">
                     <option value="none">None</option>
@@ -45,13 +45,13 @@
                     <option value="Ms">Ms</option>
                     <option value="Other">Other</option>
                 </select><br>
-                <label>First Name: </label><br><input class="form-group" required placeholder="enter name" type="text" name="firstname" id="firstname"><br>
-                <label>Last Name: </label><br><input class="form-group" required placeholder="enter last name" type="text" name="lastname" id="lastname"><br>
-                <label>Address: </label><br><input class="form-group" placeholder="enter address" required  type="text" name="address" id="address"><br>
-                <label>City: </label><br><input class="form-group" required placeholder="enter city" type="text" name="city" id="city"><br>
-                <label>Zip Code: </label><br><input class="form-group" required placeholder="enter zip" min="1" max="9999" type="number" name="zipcode" id="zipCode"><br>
-                <label>Email Address: </label><br><input class="form-group" required placeholder="enter email" type="email" name="email" id="email"><br>
-                <label>Mobile Number: </label><br><input class="form-group" required placeholder="enter number" type="tel" name="mobile-number" id="mobile-number"><br>
+                <label>First Name: </label><br><input class="form-group"  placeholder="enter name" type="text" name="firstname" id="firstname"><br>
+                <label>Last Name: </label><br><input class="form-group"  placeholder="enter last name" type="text" name="lastname" id="lastname"><br>
+                <label>Address: </label><br><input class="form-group" placeholder="enter address"   type="text" name="address" id="address"><br>
+                <label>City: </label><br><input class="form-group"  placeholder="enter city" type="text" name="city" id="city"><br>
+                <label>Zip Code: </label><br><input class="form-group"  placeholder="enter zip" min="1" max="9999" type="number" name="zipcode" id="zipCode"><br>
+                <label>Email Address: </label><br><input class="form-group"  placeholder="enter email" type="email" name="email" id="email"><br>
+                <label>Mobile Number: </label><br><input class="form-group"  placeholder="enter number" type="tel" name="mobile-number" id="mobile-number"><br>
                 <label>Home Language: </label><br>
                 <select class="form-group" name="home-language" id="home-language">
                     <option value="none">None</option>
@@ -89,12 +89,12 @@
                         style="height:200px"></textarea><br>
             <div class="" id="InfMess"></div>
                 <div class="form-group">
-                    <input class="button"class="button" type="submit" value="submit" onclick="frm()">
+                    <input class="button" id="submit" type="submit" value="submit" onload="frm()">
                     <input class="button" type="reset" value="reset" onclick="clearFields()">
                 </div>
             </fieldset>
         </form>
         <script src="../js/jsFunctions.js"></script>
     </body>
-    <footer>&#169 Thabang Makhubo</footer>
+    <footer> &#169; Thabang Makhubo</footer>
 </html>

@@ -1,4 +1,3 @@
-<?php require_once("session.php"); ?>
 <?php require_once("DBController.php"); ?> 
 <?php require_once("timestamp.php");?>  
 <?php
@@ -32,14 +31,19 @@
         if(mysqli_stmt_prepare($stmt, $sqli)){
             mysqli_stmt_bind_param($stmt, "ssssssssssss", $idNum, $title, $firstname, $lastname, $address, $city, $code, $email, $mobile, $home, $additional, $message);
             mysqli_stmt_execute($stmt);
-            $_SESSION["SuccessMessage"] ="Records inserted successfully.";
-            setcookie("SuccessMessage",$_SESSION["SuccessMessage"], time()+86400/24, "/");
-            header("Location: ../html/Registrationform.html");
+            header("Refresh:.001;  ../html/Registrationform.html");
+            ?>
+            <?php
+                echo '<script>alert("Records inserted successfully.")</script>';
+            ?><?php
             exit();
-        } else{
-            $_SESSION["ErrorMessage"] ="ERROR: Could not execute"; //$sql. " . $connection->error;
-            setcookie("ErrorMessage",$_SESSION["ErrorMessage"], time()+86400/24, "/");
-            header("Location: ../html/Registrationform.html");
+        } else {
+            header("Refresh:.001; url= ../html/Registrationform.html"); 
+            ?>
+            <?php
+                echo '<script>alert("ERROR: Could not execute")</script>';
+            ?>
+            <?php
             exit();
         }
         // Close connection
