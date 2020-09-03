@@ -1,5 +1,7 @@
+DROP DATABASE  IF EXISTS `registrationform`;
 CREATE DATABASE  IF NOT EXISTS `warthogexpressliner`;
 USE `warthogexpressliner`;
+DROP TABLE  IF EXISTS `registrationform`;
 CREATE TABLE IF NOT EXISTS `registrationform` (
   `idForm` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `idNumber` varchar(13) NOT NULL,
